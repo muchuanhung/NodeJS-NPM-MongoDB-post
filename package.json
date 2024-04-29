@@ -1,0 +1,20 @@
+{
+  "name": "mongonodb-post",
+  "version": "1.0.0",
+  "description": "mongoose practice",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.3.1"
+  }
+}
