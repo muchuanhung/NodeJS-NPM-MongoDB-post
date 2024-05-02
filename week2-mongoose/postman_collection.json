@@ -98,7 +98,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"修改貼文測試\"\r\n}",
+					"raw": "{\r\n    \"_id\": \"663058fe7099f462c7b2944b\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -106,7 +106,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://nodejs-npm-mongodb-post.onrender.com/posts/663058fe7099f462c7b2944b",
+					"raw": "https://nodejs-npm-mongodb-post.onrender.com/posts/:id",
 					"protocol": "https",
 					"host": [
 						"nodejs-npm-mongodb-post",
@@ -115,7 +115,13 @@
 					],
 					"path": [
 						"posts",
-						"663058fe7099f462c7b2944b"
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
 					]
 				}
 			},

@@ -1,7 +1,7 @@
 {
   "name": "mongonodb-post",
   "version": "1.0.0",
-  "description": "mongoose practice",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",

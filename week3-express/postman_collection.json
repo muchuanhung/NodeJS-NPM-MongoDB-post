@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "44c18379-0512-4efb-92ea-7ec895205cef",
+		"name": "week3-express-render",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18329618"
+	},
+	"item": [
+		{
+			"name": "取得所有貼文",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://week3-express-sc0k.onrender.com/posts",
+					"protocol": "https",
+					"host": [
+						"week3-express-sc0k",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "內容"
+						},
+						{
+							"key": "order",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增單筆貼文",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tags\": [\"#標籤\"],\r\n    \"type\": \"public\",\r\n    \"content\": \"貼文內容\",\r\n    \"image\": \"\",\r\n    \"userId\": \"6630677c1ceb149040332bd0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://week3-express-sc0k.onrender.com/posts",
+					"protocol": "https",
+					"host": [
+						"week3-express-sc0k",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除所有貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://week3-express-sc0k.onrender.com/posts",
+					"protocol": "https",
+					"host": [
+						"week3-express-sc0k",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除單筆貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://week3-express-sc0k.onrender.com/posts/6630677c1ceb149040332bd0",
+					"protocol": "https",
+					"host": [
+						"week3-express-sc0k",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts",
+						"6630677c1ceb149040332bd0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "修改單筆貼文",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tags\": [\"#標籤\"],\r\n    \"type\": \"public\",\r\n    \"content\": \"貼文內容\",\r\n    \"image\": \"\",\r\n    \"userId\": \"6630677c1ceb149040332bd0\",\r\n    \"likes\": 3,\r\n    \"comments\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://week3-express-sc0k.onrender.com/posts/:id",
+					"protocol": "https",
+					"host": [
+						"week3-express-sc0k",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
