@@ -30,7 +30,6 @@ const requestListener = async (req, res) => {
   let body = "";
   // 接收 post API的body資料
   req.on("data", (chunk) => {
-    console.log("chunk");
     body += chunk;
   });
 
@@ -53,7 +52,6 @@ const requestListener = async (req, res) => {
         // 取的 POST 的資料
         const postData = JSON.parse(body);
         const addPost = await Post.create(postData);
-        console.log(postData);
         res.writeHead(200, headers);
         res.write(
           JSON.stringify({

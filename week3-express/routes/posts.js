@@ -14,10 +14,6 @@ router.get('/', async (req, res, next) => {
     if (q) {
       filter.content = new RegExp(q, 'g');
     }
-    const data = await Post.find(filter).sort(sort).populate({
-      path: 'user',
-      select: '小犬名稱',
-    });
     service.success({ res, data });
   } catch (error) {
     service.error({ res, error });
@@ -76,7 +72,6 @@ router.post('/', async (req, res, next) => {
     });
     service.success({ res, data: '新增貼文成功' });
   } catch (error) {
-    console.log(error);
     service.error({ res, error: '新增貼文失敗' });
   }
 });
@@ -122,6 +117,7 @@ router.patch('/:id', async (req, res, next) => {
         image,
         likes,
         comments,
+        new: true
       });
       service.success({ res, data: '更新貼文成功' });
     } else {
@@ -134,7 +130,7 @@ router.patch('/:id', async (req, res, next) => {
 // 刪除所有貼文
 router.delete('/all', async (req, res, next) => {
   try {
-    const data = await Post.deleteMany();
+    await Post.deleteMany();
     service.success({ res, data: '刪除成功' });
   } catch (error) {
     service.error({ res, error: '刪除失敗' });
